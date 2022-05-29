@@ -9,3 +9,9 @@ let data = '';
 readStream.on('data', (chunk) => (data += chunk));
 readStream.on('end', () => console.log(data));
 readStream.on('error', (error) => console.log('Error', error.message));
+
+// Solution Example:
+
+// require('fs')
+//   .createReadStream(require('path').join(__dirname, 'text.txt'))
+//   .pipe(process.stdout);
